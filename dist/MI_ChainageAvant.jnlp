@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MI_ChainageAvant.jnlp">
+  <information>
+    <title>MI_ChainageAvant</title>
+    <vendor>aaaa</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MI_ChainageAvant.jar" size="16868" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2159593" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MI_ChainageAvant" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="gui.MI_ChainageAvant"  name="MI_ChainageAvant" />
+  <update check="always"/>
+</jnlp>

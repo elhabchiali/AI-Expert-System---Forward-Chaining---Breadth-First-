@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane id="root" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="1024.0" styleClass="root" stylesheets="@mainWindowViewStyle.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainWindowViewController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" percentWidth="67.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="400.0" minWidth="400.0" percentWidth="33.0" prefWidth="400.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="15.0" prefHeight="100.0" valignment="TOP" vgrow="ALWAYS" />
+    <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="85.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  
+   <children>
+      <Label alignment="CENTER" styleClass="title" text="CHAINAGE AVANT - Recherche en Largeur d'Abord" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
+         <font>
+            <Font name="Roboto Black" size="36.0" />
+         </font>
+         <padding>
+            <Insets bottom="15.0" left="50.0" right="50.0" top="15.0" />
+         </padding>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#00000054" height="10.0" offsetY="2.0" radius="4.5" width="10.0" />
+         </effect>
+      </Label>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <VBox alignment="CENTER" layoutX="-1.0" layoutY="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                     <children>
+                        <JFXButton fx:id="bdrLoader" onAction="#loadRegles" style="-fx-background-color: springgreen;" text="Régles" textAlignment="CENTER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="bdfLoader" onAction="#loadFaits" style="-fx-background-color: springgreen;" text="Faits" textAlignment="CENTER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <TextField fx:id="butTextField" promptText="But" styleClass="textArea">
+                           <padding>
+                              <Insets bottom="8.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <font>
+                              <Font name="Roboto Regular" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER" VBox.vgrow="NEVER">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#rechercher" style="-fx-background-color: #262626; -fx-text-fill: springgreen;" text="Rechercher" textAlignment="CENTER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#reinitialiser" style="-fx-background-color: #262626; -fx-text-fill: springgreen;" text="Reintialiser" textAlignment="CENTER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="2.5" left="5.0" right="5.0" top="2.5" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="358.0" layoutY="23.0" onAction="#dessinerArbre" style="-fx-background-color: #262626; -fx-text-fill: springgreen;" text="Dessiner le graphe" textAlignment="CENTER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="10.0" left="25.0" right="25.0" top="10.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Résultat :">
+                           <font>
+                              <Font name="Roboto Bold" size="36.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="-5.0" top="-5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="-5.0" left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <TextArea fx:id="resultatTextArea" prefHeight="200.0" prefWidth="200.0" styleClass="textArea" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </TextArea>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="25.0" right="12.5" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label text="BDF :">
+                     <font>
+                        <Font name="Roboto Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-5.0" top="-5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <TextArea fx:id="bdfTextArea" prefHeight="200.0" prefWidth="200.0" styleClass="textArea" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label layoutX="20.0" layoutY="10.0" text="BDR :">
+                     <font>
+                        <Font name="Roboto Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-5.0" top="-5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="39.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <TextArea fx:id="bdrTextArea" prefHeight="200.0" prefWidth="200.0" styleClass="textArea" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Label layoutX="10.0" layoutY="346.0" text="But :">
+                     <font>
+                        <Font name="Roboto Bold" size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-5.0" top="-5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="380.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                     <children>
+                        <TextArea fx:id="butTextArea" prefHeight="200.0" prefWidth="200.0" styleClass="textArea" HBox.hgrow="ALWAYS">
+                           <padding>
+                              <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                           </padding>
+                        </TextArea>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" top="10.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="12.5" right="25.0" top="10.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</GridPane>

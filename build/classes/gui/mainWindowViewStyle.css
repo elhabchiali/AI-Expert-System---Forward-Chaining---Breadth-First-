@@ -1,0 +1,26 @@
+.root{
+    /*-fx-background-color: red;*/
+}
+.title{
+    -fx-font-family: roboto,"open sans",helvetica;
+    -fx-font-size: 36px;
+    -fx-font-weight: 700;
+    -fx-text-transform: uppercase;
+    -fx-background-color:  #006C7D;
+    -fx-background-color:  springgreen;
+    -fx-background-radius: 0 0 5px 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 0, 0, 0, 2.5);
+}
+.textArea{
+  -fx-font-family: "open sans",roboto;
+  /*-fx-highlight-fill: #fff;*/
+  -fx-highlight-text-fill: #fff;
+  -fx-text-fill: #161616;
+  -fx-background-color: #fff;
+  -fx-background-radius: 5px;
+  -fx-font-size: 18px;
+  -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 0, 0, 0, 2);
+}
+.textArea .content {
+   -fx-background-color: #fff;
+}
